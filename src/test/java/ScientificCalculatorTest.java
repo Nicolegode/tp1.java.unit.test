@@ -1,19 +1,30 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ScientificCalculatorTest {
 
+    // Atributo da classe para reutilizar a calculadora
+    private ScientificCalculator calculator;
+
+    @BeforeEach
+    void setUp() {
+        // Setup: Instancia o objeto antes de cada teste
+        calculator = new ScientificCalculator();
+        System.out.println("Nova instância da calculadora criada para o teste");
+    }
+
     @Test
     void testAddition() {
-        ScientificCalculator calculator = new ScientificCalculator();
+        // Setup: (já feito no @BeforeEach)
         double result = calculator.add(2.0, 3.0);
         assertEquals(5.0, result);
     }
+
     @Test
     void testSubtract() {
-        // 1. SETUP: Preparação do ambiente de teste
-        // Aqui estou criando a instancia que será usada no teste
-        ScientificCalculator calculator = new ScientificCalculator();
+        // 1. SETUP: (já feito no @BeforeEach)
+        // A instância já foi criada no setUp()
 
         // 2. EXECUTION: Execução da operação que irei testar
         // Chamo o metodo subtract
