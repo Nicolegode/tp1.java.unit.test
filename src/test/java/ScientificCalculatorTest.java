@@ -16,7 +16,6 @@ class ScientificCalculatorTest {
 
     @Test
     void testAddition() {
-        // Setup: (já feito no @BeforeEach)
         double result = calculator.add(2.0, 3.0);
         assertEquals(5.0, result);
     }
@@ -34,5 +33,11 @@ class ScientificCalculatorTest {
         assertEquals(3.0, result);
 
         //4. TEARDOWN: Não será necessário a criação de limpeza nesse caso.
+    }
+
+    @Test
+    void testSquareRootPositive() {
+        double result = calculator.sqrt(9.0);
+        assertEquals(3.0, result);
     }
 }

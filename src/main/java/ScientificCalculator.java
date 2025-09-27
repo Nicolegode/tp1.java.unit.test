@@ -38,4 +38,7 @@ public class ScientificCalculator {
     public double cos(double degrees) {
         return Math.cos(Math.toRadians(degrees));
     }
+    public double sqrt(double number) {
+        return Math.sqrt(number);
+    }
 }
