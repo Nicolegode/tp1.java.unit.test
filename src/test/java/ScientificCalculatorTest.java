@@ -50,4 +50,13 @@ class ScientificCalculatorTest {
     void testDivideByZero() {
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(10.0, 0.0));
     }
+    @Test
+    void testLog() {
+        assertEquals(1.0, calculator.log(Math.E), 0.001);
+    }
+
+    @Test
+    void testSin() {
+        assertEquals(1.0, calculator.sin(90.0), 0.001);
+    }
 }
