@@ -38,7 +38,11 @@ public class ScientificCalculator {
     public double cos(double degrees) {
         return Math.cos(Math.toRadians(degrees));
     }
+
     public double sqrt(double number) {
+        if (number < 0) {
+            throw new IllegalArgumentException("Não é possível calcular raiz quadrada de número negativo");
+        }
         return Math.sqrt(number);
     }
 }
