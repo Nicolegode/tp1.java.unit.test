@@ -45,4 +45,9 @@ class ScientificCalculatorTest {
     void testSquareRootNegative() {
         assertThrows(IllegalArgumentException.class, () -> calculator.sqrt(-4.0));
     }
+
+    @Test
+    void testDivideByZero() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.divide(10.0, 0.0));
+    }
 }
